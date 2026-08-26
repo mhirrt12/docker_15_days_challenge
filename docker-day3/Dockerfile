@@ -2,8 +2,10 @@ FROM python:3.13
 
 WORKDIR /app
 
-RUN pip install  requests
-EXPOSE 8000
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
 COPY . .
 
 CMD ["python", "app.py"]
