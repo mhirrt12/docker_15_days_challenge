@@ -1,1 +1,4 @@
-print("Hello world it's my first docker image")
+import requests
+
+print("My application is running inside Docker!")
+print("Requests version:", requests.__version__)
