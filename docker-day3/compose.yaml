@@ -4,3 +4,9 @@ services:
     image: nginx
     ports:
       - "8080:80"
+  database:
+    image: postgres
+    volumes:
+        - postgres-data:/var/lip/postgresql/data
+volumes:
+   postgres-data
